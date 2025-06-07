@@ -1,0 +1,3 @@
+mixin Precision {
+  int? precision;
+}

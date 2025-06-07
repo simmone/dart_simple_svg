@@ -1,0 +1,12 @@
+<svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="250" height="240"
+    >
+  <defs>
+    <circle id="s1" r="50" />
+  </defs>
+
+  <use xlink:href="#s1" x="40" y="60" fill="#BBC42A" transform="scale(2) skewX(20)" />
+</svg>
