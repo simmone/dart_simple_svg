@@ -1,18 +1,18 @@
 import 'dart:convert';
 
-import 'package:simple_svg/tool.dart';
+import 'package:simple_svg/src/tool.dart';
 
-import 'package:simple_svg/define/shape/path.dart';
+import 'package:simple_svg/src/define/shape/path.dart';
 
-export 'package:simple_svg/define/shape/rect.dart' show Rect;
-export 'package:simple_svg/define/shape/circle.dart' show Circle;
-export 'package:simple_svg/define/shape/ellipse.dart' show Ellipse;
-export 'package:simple_svg/define/shape/line.dart' show Line;
-export 'package:simple_svg/define/shape/polygon.dart' show Polygon;
-export 'package:simple_svg/define/shape/polyline.dart' show Polyline;
-export 'package:simple_svg/define/shape/filter.dart' show Filter;
-export 'package:simple_svg/define/shape/path.dart' show Path, ArcDirection;
-export 'package:simple_svg/define/shape/text.dart'
+export 'package:simple_svg/src/define/shape/rect.dart' show Rect;
+export 'package:simple_svg/src/define/shape/circle.dart' show Circle;
+export 'package:simple_svg/src/define/shape/ellipse.dart' show Ellipse;
+export 'package:simple_svg/src/define/shape/line.dart' show Line;
+export 'package:simple_svg/src/define/shape/polygon.dart' show Polygon;
+export 'package:simple_svg/src/define/shape/polyline.dart' show Polyline;
+export 'package:simple_svg/src/define/shape/filter.dart' show Filter;
+export 'package:simple_svg/src/define/shape/path.dart' show Path, ArcDirection;
+export 'package:simple_svg/src/define/shape/text.dart'
     show
         Text,
         TextKerning,
@@ -20,21 +20,21 @@ export 'package:simple_svg/define/shape/text.dart'
         TextDecoration,
         TextKerningType,
         TextSpaceType;
-export 'package:simple_svg/define/shape/arrow.dart' show Arrow;
-export 'package:simple_svg/define/shape/gradient.dart'
+export 'package:simple_svg/src/define/shape/arrow.dart' show Arrow;
+export 'package:simple_svg/src/define/shape/gradient.dart'
     show LinearGradient, RadialGradient, SpreadMethod, GradientUnits;
-export 'package:simple_svg/define/widget.dart' show Widget;
-export 'package:simple_svg/define/group.dart' show Group;
-export 'package:simple_svg/define/sstyle.dart'
+export 'package:simple_svg/src/define/widget.dart' show Widget;
+export 'package:simple_svg/src/define/group.dart' show Group;
+export 'package:simple_svg/src/define/sstyle.dart'
     show Sstyle, StrokeLineJoin, FillRule, StrokeLineCap;
-export 'package:simple_svg/define/shape/marker.dart' show Marker, MarkerType;
-import 'package:simple_svg/define/shape.dart';
-import 'package:simple_svg/define/shape/rect.dart';
-import 'package:simple_svg/define/widget.dart';
-import 'package:simple_svg/define/sstyle.dart';
-import 'package:simple_svg/define/group.dart';
+export 'package:simple_svg/src/define/shape/marker.dart' show Marker, MarkerType;
+import 'package:simple_svg/src/define/shape.dart';
+import 'package:simple_svg/src/define/shape/rect.dart';
+import 'package:simple_svg/src/define/widget.dart';
+import 'package:simple_svg/src/define/sstyle.dart';
+import 'package:simple_svg/src/define/group.dart';
 
-import '../assets/constants.dart' as constants;
+import 'package:simple_svg/src/assets/constants.dart' as constants;
 
 /// Svg a library to generate svg file easily.
 class Svg {

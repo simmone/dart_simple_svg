@@ -1,7 +1,7 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 import 'package:simple_svg/simple_svg.dart';
-import 'package:simple_svg/assets/constants.dart' as constants;
+import 'package:simple_svg/src/assets/constants.dart' as constants;
 
 void main() {
   test('svg', () {
