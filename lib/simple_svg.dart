@@ -3,6 +3,7 @@
 /// simple_svg is a simple tool for svg create.
 library;
 
+export 'package:simple_svg/src/svg.dart' show Svg;
 export 'package:simple_svg/src/define/shape/rect.dart' show Rect;
 export 'package:simple_svg/src/define/shape/circle.dart' show Circle;
 export 'package:simple_svg/src/define/shape/ellipse.dart' show Ellipse;
@@ -27,6 +28,4 @@ export 'package:simple_svg/src/define/group.dart' show Group;
 export 'package:simple_svg/src/define/sstyle.dart'
     show Sstyle, StrokeLineJoin, FillRule, StrokeLineCap;
 export 'package:simple_svg/src/define/shape/marker.dart' show Marker, MarkerType;
-
-export 'src/svg.dart' show Svg;
 
