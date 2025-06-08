@@ -1,39 +1,57 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+A simple api for create svg image in Dart/Flutter.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+For Exampe, Create a five circle svg image:
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/example/five_circles.svg)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1. Create svg image programmatically.
+2. Include most of svg shape and filters.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+dart pub add simple_svg
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Basic steps: Create shape, set its style, place it somewhere in the group.
+
+1. Create a svg object by width and height.
+2. svg.defShape(...), add shape.
+3. Create a sstyle to define styles: stroke width, stroke color, etc.
+4. Create a widget to include the sstyle.
+5. Create a group, use group.placeWidget(...) to place widget in group.
+6. svg.addDefaultGroup(...) to set group to default.
+7. use svg.out() to output the whole svg content.
 
 ```dart
-const like = 'sample';
+import 'dart:io';
+import 'package:simple_svg/simple_svg.dart';
+
+final svg = Svg(100, 100);
+
+final rectId = svg.defShape(Rect(100, 100));
+
+var defaultGroup = Group();
+
+var sstyle = Sstyle();
+sstyle.fill = '#BBC42A';
+var widget = Widget(rectId);
+widget.sstyle = sstyle;
+
+defaultGroup.placeWidget(widget);
+svg.addDefaultGroup(defaultGroup);
+
+final file = File('rect.svg');
+var sink = file.openWrite();
+sink.write(svg.out());
+await sink.flush();
+await sink.close();
 ```
 
-## Additional information
+![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/rect/rect.svg)
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Shape, Group, Filter, Effect, etc.'s usage, check the their class doc.
+
+## Showcases
