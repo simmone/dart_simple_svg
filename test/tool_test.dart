@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:simple_svg/tool.dart';
+import 'package:test/test.dart';
+import 'package:simple_svg/src/tool.dart';
 
 void main() {
   test('round1', () {

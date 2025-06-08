@@ -1,6 +1,6 @@
-import 'package:simple_svg/define/shape.dart';
-import 'package:simple_svg/define/precision.dart';
-import 'package:simple_svg/tool.dart';
+import 'package:simple_svg/src/define/shape.dart';
+import 'package:simple_svg/src/define/precision.dart';
+import 'package:simple_svg/src/tool.dart';
 
 enum ArcDirection {
   leftBig,

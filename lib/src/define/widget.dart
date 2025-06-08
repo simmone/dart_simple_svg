@@ -1,6 +1,6 @@
 import 'sstyle.dart';
-import 'package:simple_svg/tool.dart';
-import 'package:simple_svg/define/precision.dart';
+import 'package:simple_svg/src/tool.dart';
+import 'package:simple_svg/src/define/precision.dart';
 
 class Widget with Precision {
   final String shapeId;

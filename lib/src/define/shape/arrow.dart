@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:simple_svg/tool.dart';
-import 'package:simple_svg/define/shape.dart';
+import 'package:simple_svg/src/tool.dart';
+import 'package:simple_svg/src/define/shape.dart';
 
 class Arrow extends Shape {
   num startX;
