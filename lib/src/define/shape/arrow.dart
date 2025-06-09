@@ -12,8 +12,15 @@ class Arrow extends Shape {
   num headBase;
   num headHeight;
 
-  Arrow(this.startX, this.startY, this.endX, this.endY, this.handleBase,
-      this.headBase, this.headHeight);
+  Arrow(
+    this.startX,
+    this.startY,
+    this.endX,
+    this.endY,
+    this.handleBase,
+    this.headBase,
+    this.headHeight,
+  );
 
   @override
   String unique() {
@@ -32,18 +39,22 @@ class Arrow extends Shape {
 
     final preTowardUpdown = startX == preEndX ? true : false;
 
-    final preTowardUp =
-        (startX == preEndX) && (startY > preEndY) ? true : false;
+    final preTowardUp = (startX == preEndX) && (startY > preEndY)
+        ? true
+        : false;
 
     final preXOffset = preEndX - startX;
 
     final preYOffset = preEndY - startY;
 
-    final preTheta =
-        math.atan(preXOffset == 0.0 ? 0.0 : preYOffset / preXOffset);
+    final preTheta = math.atan(
+      preXOffset == 0.0 ? 0.0 : preYOffset / preXOffset,
+    );
 
-    final preDeltaR =
-        (headHeight * math.cos(preTheta), headHeight * math.sin(preTheta));
+    final preDeltaR = (
+      headHeight * math.cos(preTheta),
+      headHeight * math.sin(preTheta),
+    );
 
     final preRSub1 = preTowardUpdown ? preDeltaR.$2 : preDeltaR.$1;
 
@@ -51,7 +62,7 @@ class Arrow extends Shape {
 
     final preR = (
       preTowardLeft ? preEndX + preRSub1 : preEndX - preRSub1,
-      preTowardUp || preTowardLeft ? preEndY + preRSub0 : preEndY - preRSub0
+      preTowardUp || preTowardLeft ? preEndY + preRSub0 : preEndY - preRSub0,
     );
 
     final newEndX = preR.$1;
@@ -80,17 +91,21 @@ class Arrow extends Shape {
 
     final r = (
       towardLeft ? newEndX - rSub1 : newEndX + rSub1,
-      towardUp || towardLeft ? newEndY - rSub0 : newEndY + rSub0
+      towardUp || towardLeft ? newEndY - rSub0 : newEndY + rSub0,
     );
 
-    final handleDeltaQ =
-        (handleBase * math.cos(alpha), handleBase * math.sin(alpha));
+    final handleDeltaQ = (
+      handleBase * math.cos(alpha),
+      handleBase * math.sin(alpha),
+    );
 
-    final handleDeltaQByTowardUpdown0 =
-        towardUpdown ? handleDeltaQ.$1 : handleDeltaQ.$2;
+    final handleDeltaQByTowardUpdown0 = towardUpdown
+        ? handleDeltaQ.$1
+        : handleDeltaQ.$2;
 
-    final handleDeltaQByTowardUpdown1 =
-        towardUpdown ? handleDeltaQ.$2 : handleDeltaQ.$1;
+    final handleDeltaQByTowardUpdown1 = towardUpdown
+        ? handleDeltaQ.$2
+        : handleDeltaQ.$1;
 
     final handleBottomLeft = (
       towardLeft
@@ -98,7 +113,7 @@ class Arrow extends Shape {
           : startX - handleDeltaQByTowardUpdown1,
       towardLeft
           ? startY - handleDeltaQByTowardUpdown0
-          : startY + handleDeltaQByTowardUpdown0
+          : startY + handleDeltaQByTowardUpdown0,
     );
 
     final handleBottomRight = (
@@ -107,7 +122,7 @@ class Arrow extends Shape {
           : newEndX - handleDeltaQByTowardUpdown1,
       towardLeft
           ? newEndY - handleDeltaQByTowardUpdown0
-          : newEndY + handleDeltaQByTowardUpdown0
+          : newEndY + handleDeltaQByTowardUpdown0,
     );
 
     final handleTopLeft = (
@@ -116,7 +131,7 @@ class Arrow extends Shape {
           : startX + handleDeltaQByTowardUpdown1,
       towardLeft
           ? startY + handleDeltaQByTowardUpdown0
-          : startY - handleDeltaQByTowardUpdown0
+          : startY - handleDeltaQByTowardUpdown0,
     );
 
     final handleTopRight = (
@@ -125,17 +140,21 @@ class Arrow extends Shape {
           : newEndX + handleDeltaQByTowardUpdown1,
       towardLeft
           ? newEndY + handleDeltaQByTowardUpdown0
-          : newEndY - handleDeltaQByTowardUpdown0
+          : newEndY - handleDeltaQByTowardUpdown0,
     );
 
-    final headDeltaQ =
-        (totalBase * math.cos(alpha), totalBase * math.sin(alpha));
+    final headDeltaQ = (
+      totalBase * math.cos(alpha),
+      totalBase * math.sin(alpha),
+    );
 
-    final headDeltaQByTowardUpdown0 =
-        towardUpdown ? headDeltaQ.$1 : headDeltaQ.$2;
+    final headDeltaQByTowardUpdown0 = towardUpdown
+        ? headDeltaQ.$1
+        : headDeltaQ.$2;
 
-    final headDeltaQByTowardUpdown1 =
-        towardUpdown ? headDeltaQ.$2 : headDeltaQ.$1;
+    final headDeltaQByTowardUpdown1 = towardUpdown
+        ? headDeltaQ.$2
+        : headDeltaQ.$1;
 
     final q = (
       towardLeft
@@ -143,7 +162,7 @@ class Arrow extends Shape {
           : newEndX - headDeltaQByTowardUpdown1,
       towardLeft
           ? newEndY - headDeltaQByTowardUpdown0
-          : newEndY + headDeltaQByTowardUpdown0
+          : newEndY + headDeltaQByTowardUpdown0,
     );
 
     final s = (
@@ -152,7 +171,7 @@ class Arrow extends Shape {
           : newEndX + headDeltaQByTowardUpdown1,
       towardLeft
           ? newEndY + headDeltaQByTowardUpdown0
-          : newEndY - headDeltaQByTowardUpdown0
+          : newEndY - headDeltaQByTowardUpdown0,
     );
 
     final buffer = StringBuffer();
@@ -160,19 +179,26 @@ class Arrow extends Shape {
     buffer.write('    <polygon id="$shapeId"\n');
     buffer.write('          points="\n');
     buffer.write(
-        '            ${Tool.round(handleBottomLeft.$1, precision!)},${Tool.round(handleBottomLeft.$2, precision!)}\n');
+      '            ${Tool.round(handleBottomLeft.$1, precision!)},${Tool.round(handleBottomLeft.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(handleBottomRight.$1, precision!)},${Tool.round(handleBottomRight.$2, precision!)}\n');
+      '            ${Tool.round(handleBottomRight.$1, precision!)},${Tool.round(handleBottomRight.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(q.$1, precision!)},${Tool.round(q.$2, precision!)}\n');
+      '            ${Tool.round(q.$1, precision!)},${Tool.round(q.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(r.$1, precision!)},${Tool.round(r.$2, precision!)}\n');
+      '            ${Tool.round(r.$1, precision!)},${Tool.round(r.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(s.$1, precision!)},${Tool.round(s.$2, precision!)}\n');
+      '            ${Tool.round(s.$1, precision!)},${Tool.round(s.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(handleTopRight.$1, precision!)},${Tool.round(handleTopRight.$2, precision!)}\n');
+      '            ${Tool.round(handleTopRight.$1, precision!)},${Tool.round(handleTopRight.$2, precision!)}\n',
+    );
     buffer.write(
-        '            ${Tool.round(handleTopLeft.$1, precision!)},${Tool.round(handleTopLeft.$2, precision!)}\n');
+      '            ${Tool.round(handleTopLeft.$1, precision!)},${Tool.round(handleTopLeft.$2, precision!)}\n',
+    );
     buffer.write('            "/>\n');
 
     return buffer.toString();

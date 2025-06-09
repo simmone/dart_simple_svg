@@ -18,13 +18,17 @@ void main() {
     text.wordSpace = TextSpace(TextSpaceType.inherit);
     text.textDecoration = TextDecoration.underLine;
 
-    expect(text.format('s1'),
-        '    <text id="s1" dx="2" dy="3" font-size="1" font-family="Arial" rotate="4 5 6 7" textLength="8" kerning="auto" letter-space="normal" word-space="inherit" text-decoration="underline">hello world</text>\n');
+    expect(
+      text.format('s1'),
+      '    <text id="s1" dx="2" dy="3" font-size="1" font-family="Arial" rotate="4 5 6 7" textLength="8" kerning="auto" letter-space="normal" word-space="inherit" text-decoration="underline">hello world</text>\n',
+    );
 
     text.path = '9.0, 10.0';
     text.pathStartOffset = 11;
-    expect(text.format('s1'),
-        '    <text id="s1" dx="2" dy="3" font-size="1" font-family="Arial" rotate="4 5 6 7" textLength="8" kerning="auto" letter-space="normal" word-space="inherit" text-decoration="underline">\n      <textPath xlink:href="#9.0, 10.0" startOffset="11%">hello world</textPath>\n    </text>\n');
+    expect(
+      text.format('s1'),
+      '    <text id="s1" dx="2" dy="3" font-size="1" font-family="Arial" rotate="4 5 6 7" textLength="8" kerning="auto" letter-space="normal" word-space="inherit" text-decoration="underline">\n      <textPath xlink:href="#9.0, 10.0" startOffset="11%">hello world</textPath>\n    </text>\n',
+    );
   });
 
   test('text basic', () async {

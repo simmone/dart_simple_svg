@@ -7,16 +7,18 @@ void main() {
   test('basic polygon', () async {
     final svg = Svg(110, 110);
 
-    final polygonId = svg.defShape(Polygon([
-      (0, 25),
-      (25, 0),
-      (75, 0),
-      (100, 25),
-      (100, 75),
-      (75, 100),
-      (25, 100),
-      (0, 75),
-    ]));
+    final polygonId = svg.defShape(
+      Polygon([
+        (0, 25),
+        (25, 0),
+        (75, 0),
+        (100, 25),
+        (100, 75),
+        (75, 100),
+        (25, 100),
+        (0, 75),
+      ]),
+    );
 
     var defaultGroup = Group();
 

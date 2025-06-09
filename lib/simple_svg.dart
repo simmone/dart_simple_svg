@@ -1,4 +1,4 @@
-/// Support for doing something awesome.
+/// Shape, Group, Style, Filter, etc.
 ///
 /// simple_svg is a simple tool for svg create.
 library;
@@ -27,5 +27,5 @@ export 'package:simple_svg/src/define/widget.dart' show Widget;
 export 'package:simple_svg/src/define/group.dart' show Group;
 export 'package:simple_svg/src/define/sstyle.dart'
     show Sstyle, StrokeLineJoin, FillRule, StrokeLineCap;
-export 'package:simple_svg/src/define/shape/marker.dart' show Marker, MarkerType;
-
+export 'package:simple_svg/src/define/shape/marker.dart'
+    show Marker, MarkerType;

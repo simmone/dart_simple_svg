@@ -123,11 +123,7 @@ void main() {
 
     final circleId = svg.defShape(Marker(MarkerType.circle));
 
-    final polylineId = svg.defShape(Polyline([
-      (0, 0),
-      (0, 100),
-      (100, 100),
-    ]));
+    final polylineId = svg.defShape(Polyline([(0, 0), (0, 100), (100, 100)]));
 
     var polylineSstyle = Sstyle();
     polylineSstyle.stroke = '#000000';

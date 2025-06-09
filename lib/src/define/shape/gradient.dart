@@ -1,10 +1,7 @@
 import 'package:simple_svg/src/define/shape.dart';
 import 'package:simple_svg/src/tool.dart';
 
-enum GradientUnits {
-  userSpaceOnUse,
-  objectBoundingBox,
-}
+enum GradientUnits { userSpaceOnUse, objectBoundingBox }
 
 extension GradientUnitsExtension on GradientUnits {
   String get name {
@@ -17,10 +14,7 @@ extension GradientUnitsExtension on GradientUnits {
   }
 }
 
-enum SpreadMethod {
-  repeat,
-  reflect,
-}
+enum SpreadMethod { repeat, reflect }
 
 extension SpreadMethodExtension on SpreadMethod {
   String get name {
@@ -87,7 +81,8 @@ class LinearGradient extends Shape {
 
     for (final stop in stops) {
       buffer.write(
-          '      <stop offset="${Tool.round(stop.$1, precision!)}%" stop-color="${stop.$2}" ');
+        '      <stop offset="${Tool.round(stop.$1, precision!)}%" stop-color="${stop.$2}" ',
+      );
 
       if (stop.$3 != 1.0) {
         buffer.write('stop-opacity="${Tool.round(stop.$3, precision!)}" ');
@@ -161,7 +156,8 @@ class RadialGradient extends Shape {
 
     for (final stop in stops) {
       buffer.write(
-          '      <stop offset="${Tool.round(stop.$1, precision!)}%" stop-color="${stop.$2}" ');
+        '      <stop offset="${Tool.round(stop.$1, precision!)}%" stop-color="${stop.$2}" ',
+      );
 
       if (stop.$3 != 1.0) {
         buffer.write('stop-opacity="${Tool.round(stop.$3, precision!)}" ');

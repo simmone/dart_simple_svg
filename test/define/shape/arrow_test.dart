@@ -7,8 +7,9 @@ void main() {
   test('arrow 1', () async {
     final svg = Svg(300, 300);
 
-    final arrowId =
-        svg.defShape(Arrow(50.0, 50.0, 280.0, 280.0, 40.0, 40.0, 80.0));
+    final arrowId = svg.defShape(
+      Arrow(50.0, 50.0, 280.0, 280.0, 40.0, 40.0, 80.0),
+    );
 
     var arrowSstyle = Sstyle();
     arrowSstyle.stroke = 'teal';

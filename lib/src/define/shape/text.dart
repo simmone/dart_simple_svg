@@ -1,10 +1,6 @@
 import 'package:simple_svg/src/define/shape.dart';
 
-enum TextKerningType {
-  number,
-  auto,
-  inherit,
-}
+enum TextKerningType { number, auto, inherit }
 
 extension TextKerningTypeExtension on TextKerningType {
   String get name {
@@ -35,11 +31,7 @@ class TextKerning {
   }
 }
 
-enum TextSpaceType {
-  number,
-  normal,
-  inherit,
-}
+enum TextSpaceType { number, normal, inherit }
 
 extension TextSpaceTypeExtension on TextSpaceType {
   String get name {
@@ -70,11 +62,7 @@ class TextSpace {
   }
 }
 
-enum TextDecoration {
-  overLine,
-  underLine,
-  lineThrough,
-}
+enum TextDecoration { overLine, underLine, lineThrough }
 
 extension TextDecorationExtension on TextDecoration {
   String get name {

@@ -14,8 +14,10 @@ void main() {
     sstyle.fillOpacity = 0.5;
     sstyle.precision = 4;
 
-    expect(sstyle.format(),
-        'fill="url(#s1)" fill-rule="nonzero" fill-opacity="0.5"');
+    expect(
+      sstyle.format(),
+      'fill="url(#s1)" fill-rule="nonzero" fill-opacity="0.5"',
+    );
   });
 
   test('format fill2', () {
@@ -41,8 +43,10 @@ void main() {
     sstyle.strokeDashOffset = 5.0;
     sstyle.precision = 4;
 
-    expect(sstyle.format(),
-        'fill="none" stroke-width="5" stroke="#ABABAB" stroke-linejoin="round" stroke-linecap="square" stroke-miterlimit="2" stroke-dasharray="40,10" stroke-dashoffset="5"');
+    expect(
+      sstyle.format(),
+      'fill="none" stroke-width="5" stroke="#ABABAB" stroke-linejoin="round" stroke-linecap="square" stroke-miterlimit="2" stroke-dasharray="40,10" stroke-dashoffset="5"',
+    );
   });
 
   test('format transform', () {
@@ -55,13 +59,17 @@ void main() {
     sstyle.skewY = 3.0;
     sstyle.precision = 4;
 
-    expect(sstyle.format(),
-        'fill="none" transform="translate(0.1 0.2) rotate(30) scale(1) skewX(2) skewY(3)"');
+    expect(
+      sstyle.format(),
+      'fill="none" transform="translate(0.1 0.2) rotate(30) scale(1) skewX(2) skewY(3)"',
+    );
 
     sstyle.scaleAll = null;
     sstyle.scaleXy = (2, 3);
 
-    expect(sstyle.format(),
-        'fill="none" transform="translate(0.1 0.2) rotate(30) scale(2 3) skewX(2) skewY(3)"');
+    expect(
+      sstyle.format(),
+      'fill="none" transform="translate(0.1 0.2) rotate(30) scale(2 3) skewX(2) skewY(3)"',
+    );
   });
 }

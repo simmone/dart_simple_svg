@@ -7,15 +7,17 @@ void main() {
   test('basic polyline', () async {
     final svg = Svg(130, 130);
 
-    final polylineId = svg.defShape(Polyline([
-      (0, 0),
-      (40, 0),
-      (40, 40),
-      (80, 40),
-      (80, 80),
-      (120, 80),
-      (120, 120),
-    ]));
+    final polylineId = svg.defShape(
+      Polyline([
+        (0, 0),
+        (40, 0),
+        (40, 40),
+        (80, 40),
+        (80, 80),
+        (120, 80),
+        (120, 120),
+      ]),
+    );
 
     var defaultGroup = Group();
 

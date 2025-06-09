@@ -50,10 +50,9 @@ void main() {
 
     final rectId = svg.defShape(Rect(100, 100));
 
-    final gradientId = svg.defShape(LinearGradient([
-      (0, '#BBC42A', 1),
-      (100, '#ED6E46', 1),
-    ]));
+    final gradientId = svg.defShape(
+      LinearGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+    );
 
     var rectSstyle = Sstyle();
     rectSstyle.fillGradient = gradientId;
@@ -77,10 +76,9 @@ void main() {
 
     final rectId = svg.defShape(Rect(100, 100));
 
-    final gradientId = svg.defShape(RadialGradient([
-      (0, '#BBC42A', 1),
-      (100, '#ED6E46', 1),
-    ]));
+    final gradientId = svg.defShape(
+      RadialGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+    );
 
     var rectSstyle = Sstyle();
     rectSstyle.fillGradient = gradientId;

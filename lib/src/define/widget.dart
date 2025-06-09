@@ -19,8 +19,10 @@ class Widget with Precision {
     outItems.add('<use xlink:href="#$shapeId"');
 
     if (at != null) {
-      final atStr =
-          (Tool.round(at!.$1, precision!), Tool.round(at!.$2, precision!));
+      final atStr = (
+        Tool.round(at!.$1, precision!),
+        Tool.round(at!.$2, precision!),
+      );
       if (atStr != ('0', '0')) {
         outItems.add('x="${atStr.$1}" y="${atStr.$2}"');
       }

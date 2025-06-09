@@ -55,3 +55,15 @@ await sink.close();
 Shape, Group, Filter, Effect, etc.'s usage, check the their class doc.
 
 ## Showcases
+
+### A recursive circle image.
+
+![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/example/recursive.svg)
+
+Code :[recursive circle](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/test/showcase/recursive_test.dart)
+
+### A recursive fern image.
+
+![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/example/fern.svg)
+
+Code: [recursive circle](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/test/showcase/fern_test.dart)

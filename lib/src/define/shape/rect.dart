@@ -21,11 +21,13 @@ class Rect extends Shape {
     buffer.write('    <rect id="$shapeId" ');
 
     buffer.write(
-        'width="${Tool.round(width, precision!)}" height="${Tool.round(height, precision!)}"');
+      'width="${Tool.round(width, precision!)}" height="${Tool.round(height, precision!)}"',
+    );
 
     if (radiusX != null && radiusY != null) {
       buffer.write(
-          ' rx="${Tool.round(radiusX ?? 0, precision!)}" ry="${Tool.round(radiusY ?? 0, precision!)}"');
+        ' rx="${Tool.round(radiusX ?? 0, precision!)}" ry="${Tool.round(radiusY ?? 0, precision!)}"',
+      );
     }
 
     buffer.write(' />\n');

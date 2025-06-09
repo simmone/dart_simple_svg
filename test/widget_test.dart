@@ -46,7 +46,9 @@ void main() {
     widget.markerMidId = 's4';
     widget.markerEndId = 's5';
 
-    expect(widget.format(),
-        '<use xlink:href="#s1" filter="url(#s2)" marker-start="url(#s3)" marker-mid="url(#s4)" marker-end="url(#s5)" />');
+    expect(
+      widget.format(),
+      '<use xlink:href="#s1" filter="url(#s2)" marker-start="url(#s3)" marker-mid="url(#s4)" marker-end="url(#s5)" />',
+    );
   });
 }

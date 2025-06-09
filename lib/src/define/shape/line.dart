@@ -24,7 +24,8 @@ class Line extends Shape {
     final buffer = StringBuffer();
 
     buffer.write(
-        '    <line id="$shapeId" x1="${Tool.round(startX, precision!)}" y1="${Tool.round(startY, precision!)}" x2="${Tool.round(endX, precision!)}" y2="${Tool.round(endY, precision!)}" />\n');
+      '    <line id="$shapeId" x1="${Tool.round(startX, precision!)}" y1="${Tool.round(startY, precision!)}" x2="${Tool.round(endX, precision!)}" y2="${Tool.round(endY, precision!)}" />\n',
+    );
 
     return buffer.toString();
   }

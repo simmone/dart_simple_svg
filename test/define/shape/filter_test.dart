@@ -20,12 +20,15 @@ void main() {
 
       buffer.write('    <filter id="1">\n');
       buffer.write(
-          '      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>\n');
+        '      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>\n',
+      );
       buffer.write(
-          '      <feOffset dx="3" dy="3" result="offsetblur"></feOffset>\n');
+        '      <feOffset dx="3" dy="3" result="offsetblur"></feOffset>\n',
+      );
       buffer.write('      <feFlood flood-color="black"></feFlood>\n');
       buffer.write(
-          '      <feComposite in2="offsetblur" operator="in"></feComposite>\n');
+        '      <feComposite in2="offsetblur" operator="in"></feComposite>\n',
+      );
       buffer.write('      <feMerge>\n');
       buffer.write('        <feMergeNode></feMergeNode>\n');
       buffer.write('        <feMergeNode in="SourceGraphic"></feMergeNode>\n');

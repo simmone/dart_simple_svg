@@ -16,7 +16,8 @@ class Circle extends Shape {
     final buffer = StringBuffer();
 
     buffer.write(
-        '    <circle id="$shapeId" r="${Tool.round(radius, precision!)}" />\n');
+      '    <circle id="$shapeId" r="${Tool.round(radius, precision!)}" />\n',
+    );
 
     return buffer.toString();
   }

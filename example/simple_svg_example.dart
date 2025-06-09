@@ -47,4 +47,3 @@ void main() async {
   await sink.flush();
   await sink.close();
 }
-

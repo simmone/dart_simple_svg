@@ -70,7 +70,8 @@ class Marker extends Shape {
     final buffer = StringBuffer();
 
     buffer.write(
-        '    <marker id="$shapeId" markerWidth="${Tool.round(size, super.precision!)}" markerHeight="$size" orient="auto-start-reverse" viewBox="0 0 15 15" refX="${Tool.round(x, super.precision!)}" refY="5" markerUnits="strokeWidth">\n');
+      '    <marker id="$shapeId" markerWidth="${Tool.round(size, super.precision!)}" markerHeight="$size" orient="auto-start-reverse" viewBox="0 0 15 15" refX="${Tool.round(x, super.precision!)}" refY="5" markerUnits="strokeWidth">\n',
+    );
     buffer.write('      $path fill="context-stroke" />\n');
     buffer.write('    </marker>\n');
 

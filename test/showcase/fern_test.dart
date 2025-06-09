@@ -26,8 +26,13 @@ const bend = 5;
   return (startPoint.$1 + end.real, startPoint.$2 + end.imaginary);
 }
 
-void recursivePoints((num, num) loopStartPoint, num length, num deg, num width,
-    List<(String, (num, num), (num, num))> lines) {
+void recursivePoints(
+  (num, num) loopStartPoint,
+  num length,
+  num deg,
+  num width,
+  List<(String, (num, num), (num, num))> lines,
+) {
   if ((centralReduction * length) >= minLength) {
     final loopEndPoint = getEndPoint(loopStartPoint, length, deg);
 
@@ -36,20 +41,35 @@ void recursivePoints((num, num) loopStartPoint, num length, num deg, num width,
     lines.add((
       trunctedWidth,
       (loopStartPoint.$1, canvasHeight - loopStartPoint.$2),
-      (loopEndPoint.$1, canvasHeight - loopEndPoint.$2)
+      (loopEndPoint.$1, canvasHeight - loopEndPoint.$2),
     ));
 
     // central branch
-    recursivePoints(loopEndPoint, length * centralReduction, deg - bend,
-        width * stepWidth, lines);
+    recursivePoints(
+      loopEndPoint,
+      length * centralReduction,
+      deg - bend,
+      width * stepWidth,
+      lines,
+    );
 
     // left branch
-    recursivePoints(loopEndPoint, length * lateralReduction,
-        deg + lateralDeg - bend, width * stepWidth, lines);
+    recursivePoints(
+      loopEndPoint,
+      length * lateralReduction,
+      deg + lateralDeg - bend,
+      width * stepWidth,
+      lines,
+    );
 
     // right branch
-    recursivePoints(loopEndPoint, length * lateralReduction,
-        deg - lateralDeg - bend, width * stepWidth, lines);
+    recursivePoints(
+      loopEndPoint,
+      length * lateralReduction,
+      deg - lateralDeg - bend,
+      width * stepWidth,
+      lines,
+    );
   }
 }
 
@@ -57,8 +77,10 @@ void main() {
   test('make poloar test', () async {
     expect(Complex.polar(10, pi * 0.5), Complex(6.123233995736766e-16, 10.0));
 
-    expect(Complex.polar(10, pi * 0.25),
-        Complex(7.0710678118654755, 7.071067811865475));
+    expect(
+      Complex.polar(10, pi * 0.25),
+      Complex(7.0710678118654755, 7.071067811865475),
+    );
   });
 
   test('fern recursivePoints', () async {
@@ -124,7 +146,7 @@ void main() {
 
     final file = File('showcase/example/fern.svg');
     final fernSvgFile = await file.readAsString();
-    
+
     expect(svg.out(), fernSvgFile);
   });
 }

@@ -1,11 +1,7 @@
 import 'package:simple_svg/src/tool.dart';
 import 'package:simple_svg/src/define/precision.dart';
 
-enum FillRule {
-  nonzero,
-  evenodd,
-  inerit,
-}
+enum FillRule { nonzero, evenodd, inerit }
 
 extension FillRuleExtension on FillRule {
   String get name {
@@ -20,12 +16,7 @@ extension FillRuleExtension on FillRule {
   }
 }
 
-enum StrokeLineCap {
-  butt,
-  round,
-  square,
-  inherit,
-}
+enum StrokeLineCap { butt, round, square, inherit }
 
 extension StrokeLineCapExtension on StrokeLineCap {
   String get name {
@@ -42,11 +33,7 @@ extension StrokeLineCapExtension on StrokeLineCap {
   }
 }
 
-enum StrokeLineJoin {
-  miter,
-  round,
-  bevel,
-}
+enum StrokeLineJoin { miter, round, bevel }
 
 extension StrokeLineJoinExtension on StrokeLineJoin {
   String get name {
@@ -121,7 +108,8 @@ class Sstyle with Precision {
 
     if (strokeMiterLimit != null) {
       outItems.add(
-          'stroke-miterlimit="${Tool.round(strokeMiterLimit!, precision!)}"');
+        'stroke-miterlimit="${Tool.round(strokeMiterLimit!, precision!)}"',
+      );
     }
 
     if (strokeDashArray != null) {
@@ -130,7 +118,8 @@ class Sstyle with Precision {
 
     if (strokeDashOffset != null) {
       outItems.add(
-          'stroke-dashoffset="${Tool.round(strokeDashOffset!, precision!)}"');
+        'stroke-dashoffset="${Tool.round(strokeDashOffset!, precision!)}"',
+      );
     }
 
     if ((translate != null) ||
@@ -143,7 +132,8 @@ class Sstyle with Precision {
 
       if (translate != null) {
         transforms.add(
-            'translate(${Tool.round(translate!.$1, precision!)} ${Tool.round(translate!.$2, precision!)})');
+          'translate(${Tool.round(translate!.$1, precision!)} ${Tool.round(translate!.$2, precision!)})',
+        );
       }
 
       if (rotate != null) {
@@ -155,7 +145,8 @@ class Sstyle with Precision {
           transforms.add('scale(${Tool.round(scaleAll!, precision!)})');
         } else {
           transforms.add(
-              'scale(${Tool.round(scaleXy!.$1, precision!)} ${Tool.round(scaleXy!.$2, precision!)})');
+            'scale(${Tool.round(scaleXy!.$1, precision!)} ${Tool.round(scaleXy!.$2, precision!)})',
+          );
         }
       }
 
