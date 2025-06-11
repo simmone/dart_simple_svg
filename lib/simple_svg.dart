@@ -1,6 +1,6 @@
-/// Shape, Group, Style, Filter, etc.
+/// Classes: Svg, Shape, Group, Style, Filter, etc.
 ///
-/// simple_svg is a simple tool for svg create.
+/// Each class will have example to show how to use.
 library;
 
 export 'package:simple_svg/src/svg.dart' show Svg;

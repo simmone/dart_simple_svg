@@ -3,6 +3,26 @@ import 'dart:math' as math;
 import 'package:simple_svg/src/tool.dart';
 import 'package:simple_svg/src/define/shape.dart';
 
+/// Arrow: a custom arrow
+///
+
+///
+/// Example1: create a arrow
+///```dart
+///    final arrowId = svg.defShape(
+///      Arrow(50.0, 50.0, 280.0, 280.0, 40.0, 40.0, 80.0),
+///    );
+///
+///    var arrowSstyle = Sstyle();
+///    arrowSstyle.stroke = 'teal';
+///    arrowSstyle.fill = 'lavender';
+///    arrowSstyle.strokeWidth = 5.0;
+///```
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/arrow/arrow1.svg)
+///
+/// Arrow(startX, startY, endX, endY, handleBase, headBAse, headHeight), parameters shows below:
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/arrow/arrow1_show.svg)
 class Arrow extends Shape {
   num startX;
   num startY;

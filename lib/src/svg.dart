@@ -10,7 +10,18 @@ import 'package:simple_svg/src/define/group.dart';
 
 import 'package:simple_svg/src/assets/constants.dart' as constants;
 
-/// Svg a library to generate svg file easily.
+/// Svg is the top class to generate svg.
+///
+/// Example1: create a empty svg file with width and height.
+///```dart
+///  final svg = Svg(30.0, 20.0);
+///  svg.out();
+///```
+/// Svg's precision is the decimal place of all the numbers, default is 4.
+///
+/// For example, when precision is 4, so 4.0 convert to '4', 4.12345 convert to '4.1235'.
+///
+/// When your svg file has much float numbers, precision is important.
 class Svg {
   final num width;
   final num height;
