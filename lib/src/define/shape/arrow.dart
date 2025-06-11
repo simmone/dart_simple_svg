@@ -5,7 +5,7 @@ import 'package:simple_svg/src/define/shape.dart';
 
 /// Arrow: a custom arrow
 ///
-
+/// Complete example code please check the tests.
 ///
 /// Example1: create a arrow
 ///```dart
@@ -23,6 +23,10 @@ import 'package:simple_svg/src/define/shape.dart';
 /// Arrow(startX, startY, endX, endY, handleBase, headBAse, headHeight), parameters shows below:
 ///
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/arrow/arrow1_show.svg)
+///
+/// Example2: all directions's arrow
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/arrow/arrow2.svg)
 class Arrow extends Shape {
   num startX;
   num startY;
