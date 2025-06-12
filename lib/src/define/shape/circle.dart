@@ -5,12 +5,12 @@ import 'package:simple_svg/src/tool.dart';
 ///
 /// Example1: create a normal circle
 ///```dart
-/// final circleId = svg.defShape(Circle(50.0));
-/// var sstyle = Sstyle();
-/// sstyle.fill = '#BBC42A';
-/// var widget = Widget(circleId);
-/// widget.sstyle = sstyle;
-/// widget.at = (50, 50);
+///    final circleId = svg.defShape(Circle(50.0));
+///    var sstyle = Sstyle();
+///    sstyle.fill = '#BBC42A';
+///    var widget = Widget(circleId);
+///    widget.sstyle = sstyle;
+///    widget.at = (50, 50);
 ///```
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/circle/circle.svg)
 ///

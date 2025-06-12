@@ -1,6 +1,20 @@
 import 'package:simple_svg/src/define/shape.dart';
 import 'package:simple_svg/src/tool.dart';
 
+/// Ellipse: defined by radiusX and radiusY
+///
+/// Example: 
+///```dart
+///    final ellipseId = svg.defShape(Ellipse(100.0, 50.0));
+///
+///    var defaultGroup = Group();
+///    var sstyle = Sstyle();
+///    sstyle.fill = '#7AA20D';
+///    var widget = Widget(ellipseId);
+///    widget.sstyle = sstyle;
+///    widget.at = (100, 50);
+///```
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/ellipse/ellipse.svg)
 class Ellipse extends Shape {
   final num radiusX;
   final num radiusY;
