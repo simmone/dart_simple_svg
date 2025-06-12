@@ -1,6 +1,17 @@
 import 'package:simple_svg/src/define/shape.dart';
 import 'package:simple_svg/src/tool.dart';
 
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/filter/filter_blur_dropdown.svg)
+///
+/// Give other shape some effect, usage: set filterId in widget.
+///
+/// Example: give circle a blurdropdown effect.
+///```dart
+///    final circleId = svg.defShape(Circle(50));
+///    final filterId = svg.defShape(Filter());
+///    var widget = Widget(circleId);
+///    widget.filterId = filterId;
+///```
 class Filter extends Shape {
   num? blur;
   num? dropdownOffset;

@@ -1,9 +1,9 @@
 import 'package:simple_svg/src/define/shape.dart';
 import 'package:simple_svg/src/tool.dart';
 
-/// Circle: defined by radius length
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/circle/circle.svg)
 ///
-/// Example1: create a normal circle
+/// Example1 code: create a normal circle
 ///```dart
 ///    final circleId = svg.defShape(Circle(50.0));
 ///    var sstyle = Sstyle();
@@ -12,8 +12,6 @@ import 'package:simple_svg/src/tool.dart';
 ///    widget.sstyle = sstyle;
 ///    widget.at = (50, 50);
 ///```
-/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/circle/circle.svg)
-///
 /// Example2: create multiple circle
 /// 
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/circle/circle4.svg)
