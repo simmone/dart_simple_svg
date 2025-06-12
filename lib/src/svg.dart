@@ -22,6 +22,8 @@ import 'package:simple_svg/src/assets/constants.dart' as constants;
 /// For example, when precision is 4, so 4.0 convert to '4', 4.12345 convert to '4.1235'.
 ///
 /// When your svg file has much float numbers, precision is important.
+///
+/// Example's complete code please check the test folder.
 class Svg {
   final num width;
   final num height;

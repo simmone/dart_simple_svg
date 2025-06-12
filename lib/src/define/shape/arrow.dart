@@ -5,8 +5,6 @@ import 'package:simple_svg/src/define/shape.dart';
 
 /// Arrow: a custom arrow
 ///
-/// Complete example code please check the tests.
-///
 /// Example1: create a arrow
 ///```dart
 ///    final arrowId = svg.defShape(
