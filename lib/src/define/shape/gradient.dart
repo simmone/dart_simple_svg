@@ -27,6 +27,19 @@ extension SpreadMethodExtension on SpreadMethod {
   }
 }
 
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/gradient/linear_gradient.svg)
+///
+/// Example: set linear gradient arguments.
+///```dart
+///    final rectId = svg.defShape(Rect(100, 100));
+///
+///    final gradientId = svg.defShape(
+///      LinearGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+///    );
+///
+///    var rectSstyle = Sstyle();
+///    rectSstyle.fillGradient = gradientId;
+///```
 class LinearGradient extends Shape {
   List<(num, String, num)> stops;
   num? x1;
@@ -97,6 +110,19 @@ class LinearGradient extends Shape {
   }
 }
 
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/gradient/radial_gradient.svg)
+///
+/// Example: set radial gradient arguments.
+///```dart
+///    final rectId = svg.defShape(Rect(100, 100));
+///
+///    final gradientId = svg.defShape(
+///      RadialGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+///    );
+///
+///    var rectSstyle = Sstyle();
+///    rectSstyle.fillGradient = gradientId;
+///```
 class RadialGradient extends Shape {
   List<(num, String, num)> stops;
   num? cx;
