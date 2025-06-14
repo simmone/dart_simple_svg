@@ -1,6 +1,6 @@
-A simple api for create svg image in Dart/Flutter.
+A simple api for create svg image in Dart/Flutter programatically.
 
-For Exampe, Create a five circle svg image:
+thanks to Joni's tutorial: [SVG Pocket Guide](http://svgpocketguide.com/)
 
 ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/example/five_circles.svg)
 
@@ -29,18 +29,32 @@ Basic steps: Create shape, set its style, place it somewhere in the group.
 import 'dart:io';
 import 'package:simple_svg/simple_svg.dart';
 
+// create the canvas
 final svg = Svg(100, 100);
 
+// add a shape, you can reuse it by shape id.
 final rectId = svg.defShape(Rect(100, 100));
 
+// create a group as default group, you create shapes or groups in it.
 var defaultGroup = Group();
 
+// only need define a basic shape once(a rectangle has same width and height), 
+// but can give it different style and place it in different position.
+//
+// create a sstyle, give a shape a style: 
+// fill color, stroke color, stroke width, etc.
 var sstyle = Sstyle();
 sstyle.fill = '#BBC42A';
+
+// create a widget to include the sstyle or specify the shape position
+// widget.at = (100, 100), etc.
 var widget = Widget(rectId);
 widget.sstyle = sstyle;
 
+// group include widget.
 defaultGroup.placeWidget(widget);
+
+// set default group
 svg.addDefaultGroup(defaultGroup);
 
 final file = File('rect.svg');

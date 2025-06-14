@@ -77,6 +77,72 @@ extension TextDecorationExtension on TextDecoration {
   }
 }
 
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/text/text1.svg)
+///
+/// Example1: create a text
+///
+///```dart
+///    final text = Text('城春草木深');
+///    text.fontSize = 50;
+///
+///    final textId = svg.defShape(text);
+///
+///    var defaultGroup = Group();
+///
+///    var textSstyle = Sstyle();
+///    textSstyle.fill = '#ED6E46';
+///```
+///
+/// Example2: text rotate
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/text/text2.svg)
+///
+///```dart
+///    final text = Text('城春草木深');
+///    text.fontSize = 50;
+///    text.rotate = [10, 20, 30, 40, 50];
+///    text.textLength = 300;
+///```
+///
+/// Example3: text decoration
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/text/text3.svg)
+///
+///```dart
+///    final text1 = Text('国破山河在');
+///    text1.fontSize = 50;
+///    text1.textDecoration = TextDecoration.overLine;
+///    final text1Id = svg.defShape(text1);
+///
+///    final text2 = Text('国破山河在');
+///    text2.fontSize = 50;
+///    text2.textDecoration = TextDecoration.underLine;
+///    final text2Id = svg.defShape(text2);
+///
+///    final text3 = Text('国破山河在');
+///    text3.fontSize = 50;
+///    text3.textDecoration = TextDecoration.lineThrough;
+///    final text3Id = svg.defShape(text3);
+///```
+///
+/// Example4: text path
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/text/text4.svg)
+///
+///```dart
+///    final svg = Svg(500, 100);
+///
+///    final qcurvePath = Path();
+///    qcurvePath.movetoAbs((10, 60));
+///    qcurvePath.qcurveAbs((110, 10), (210, 60));
+///    qcurvePath.qcurveAbs((310, 110), (410, 60));
+///    final qcurveId = svg.defShape(qcurvePath);
+///
+///    final text = Text('国破山河在 城春草木深 感时花溅泪 恨别鸟惊心');
+///    text.path = qcurveId;
+///    text.pathStartOffset = 5;
+///    final textId = svg.defShape(text);
+///```
 class Text extends Shape {
   String text;
   num? fontSize;

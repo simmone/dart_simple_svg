@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:test/test.dart';
 import 'package:simple_svg/simple_svg.dart';
-import 'package:simple_svg/src/define/sstyle.dart';
 
 void main() {
   test('sstyle', () {
