@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:test/test.dart';
+import 'package:simple_svg/simple_svg.dart';
 import 'package:simple_svg/src/define/sstyle.dart';
 
 void main() {
@@ -71,5 +74,52 @@ void main() {
       sstyle.format(),
       'fill="none" transform="translate(0.1 0.2) rotate(30) scale(2 3) skewX(2) skewY(3)"',
     );
+  });
+
+  test('transform1 test', () async {
+    final svg = Svg(150, 150);
+
+    final rectId = svg.defShape(Rect(100, 100));
+
+    var defaultGroup = Group();
+    var widget = Widget(rectId);
+    var sstyle = Sstyle();
+    sstyle.fill = '#BBC42A';
+    sstyle.translate = (75, 5);
+    sstyle.rotate = 45;
+
+    widget.sstyle = sstyle;
+    defaultGroup.placeWidget(widget);
+
+    svg.addDefaultGroup(defaultGroup);
+
+    final file = File('showcase/sstyle/transform1.svg');
+    final rectSvgFile = await file.readAsString();
+
+    expect(svg.out(), rectSvgFile);
+  });
+
+  test('transform2 test', () async {
+    final svg = Svg(250, 240);
+
+    final circleId = svg.defShape(Circle(50));
+
+    var defaultGroup = Group();
+    var widget = Widget(circleId);
+    var sstyle = Sstyle();
+    sstyle.fill = '#BBC42A';
+    sstyle.scaleAll = 2;
+    sstyle.skewX = 20;
+
+    widget.sstyle = sstyle;
+    widget.at = (40, 60);
+    defaultGroup.placeWidget(widget);
+
+    svg.addDefaultGroup(defaultGroup);
+
+    final file = File('showcase/sstyle/transform2.svg');
+    final rectSvgFile = await file.readAsString();
+
+    expect(svg.out(), rectSvgFile);
   });
 }

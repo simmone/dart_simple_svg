@@ -88,7 +88,7 @@ enum MarkerType {
 ///    defaultGroup.placeWidget(widget);
 ///```
 ///
-/// Example4: 
+/// Example4:
 ///
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/marker/marker4.svg)
 ///

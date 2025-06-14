@@ -3,7 +3,7 @@ import 'package:simple_svg/src/tool.dart';
 
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/ellipse/ellipse.svg)
 ///
-/// Example: 
+/// Example:
 ///```dart
 ///    final ellipseId = svg.defShape(Ellipse(100.0, 50.0));
 ///

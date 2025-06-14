@@ -48,6 +48,32 @@ extension StrokeLineJoinExtension on StrokeLineJoin {
   }
 }
 
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/sstyle/transform1.svg)
+///
+/// Example1: rotate a rectangle.
+///
+///```dart
+///    final rectId = svg.defShape(Rect(100, 100));
+///
+///    var widget = Widget(rectId);
+///    var sstyle = Sstyle();
+///    sstyle.fill = '#BBC42A';
+///    sstyle.translate = (75, 5);
+///    sstyle.rotate = 45;
+///```
+/// Example2: scale a circle.
+///
+/// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/sstyle/transform1.svg)
+///
+///```dart
+///    final circleId = svg.defShape(Circle(50));
+///
+///    var widget = Widget(circleId);
+///    var sstyle = Sstyle();
+///    sstyle.fill = '#BBC42A';
+///    sstyle.scaleAll = 2;
+///    sstyle.skewX = 20;
+///```
 class Sstyle with Precision {
   String? fill;
   FillRule? fillRule;

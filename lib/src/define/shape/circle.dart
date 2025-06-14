@@ -13,7 +13,7 @@ import 'package:simple_svg/src/tool.dart';
 ///    widget.at = (50, 50);
 ///```
 /// Example2: create multiple circle
-/// 
+///
 /// ![](https://raw.githubusercontent.com/simmone/dart_simple_svg/refs/heads/master/showcase/shapes/circle/circle4.svg)
 class Circle extends Shape {
   final num radius;
