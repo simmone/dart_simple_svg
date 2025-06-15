@@ -1,7 +1,7 @@
 name: simple_svg
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/simmone/dart_simple_svg
 
 environment:
   sdk: ^3.8.1
