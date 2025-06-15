@@ -1,5 +1,5 @@
 name: simple_svg
-description: A starting point for Dart libraries or applications.
+description: A simple api for create svg image in Dart/Flutter programatically.
 version: 1.0.0
 repository: https://github.com/simmone/dart_simple_svg
 
