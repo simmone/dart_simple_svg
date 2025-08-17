@@ -14,12 +14,12 @@ void main() {
 
     var arc2Path = Path();
     arc2Path.movetoAbs((130, 45));
-    arc2Path.arcAbs((170, 85), (80, 40), ArcDirection.leftSmall);
+    arc2Path.arcRel((40, 40), (80, 40), ArcDirection.leftSmall);
     final arc2Id = svg.defShape(arc2Path);
 
     var arc3Path = Path();
     arc3Path.movetoAbs((130, 45));
-    arc3Path.arcAbs((170, 85), (80, 40), ArcDirection.rightBig);
+    arc3Path.arcRel((40, 40), (80, 40), ArcDirection.rightBig);
     final arc3Id = svg.defShape(arc3Path);
 
     var arc4Path = Path();

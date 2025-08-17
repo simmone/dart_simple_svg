@@ -11,7 +11,7 @@ void main() {
     linePath.movetoAbs((5, 5));
     linePath.linetoHor(100.0);
     linePath.linetoVer(100.0);
-    linePath.linetoRel((-50.0, 50.0));
+    linePath.linetoAbs((55.0, 155.0));
     linePath.linetoRel((-50, -50));
     linePath.close();
     final lineId = svg.defShape(linePath);

@@ -1,7 +1,7 @@
 import 'package:simple_svg/src/tool.dart';
 import 'package:simple_svg/src/define/precision.dart';
 
-enum FillRule { nonzero, evenodd, inerit }
+enum FillRule { nonzero, evenodd, inherit }
 
 extension FillRuleExtension on FillRule {
   String get name {
@@ -10,8 +10,8 @@ extension FillRuleExtension on FillRule {
         return 'nonzero';
       case FillRule.evenodd:
         return 'evenodd';
-      case FillRule.inerit:
-        return 'inerit';
+      case FillRule.inherit:
+        return 'inherit';
     }
   }
 }

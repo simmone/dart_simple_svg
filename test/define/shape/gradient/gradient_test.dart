@@ -36,8 +36,8 @@ void main() {
     gradient.fx = 2.0;
     gradient.fy = 3.0;
     gradient.r = 4.0;
-    gradient.gradientUnits = GradientUnits.userSpaceOnUse;
-    gradient.spreadMethod = SpreadMethod.repeat;
+    gradient.gradientUnits = GradientUnits.objectBoundingBox;
+    gradient.spreadMethod = SpreadMethod.reflect;
 
     final file = File('test/define/shape/gradient/radial_gradient_define.svg');
     final radialDefineFile = await file.readAsString();
@@ -51,7 +51,7 @@ void main() {
     final rectId = svg.defShape(Rect(100, 100));
 
     final gradientId = svg.defShape(
-      LinearGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+      LinearGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 0.9)]),
     );
 
     var rectSstyle = Sstyle();
@@ -77,7 +77,7 @@ void main() {
     final rectId = svg.defShape(Rect(100, 100));
 
     final gradientId = svg.defShape(
-      RadialGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 1)]),
+      RadialGradient([(0, '#BBC42A', 1), (100, '#ED6E46', 0.9)]),
     );
 
     var rectSstyle = Sstyle();

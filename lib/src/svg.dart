@@ -144,15 +144,7 @@ class Svg {
       final groupId = groupShow.$1;
       final groupPos = groupShow.$2;
 
-      outBuffer.write('  <use xlink:href="#$groupId" ');
-      final groupPosStr = (
-        Tool.round(groupPos.$1, precision),
-        Tool.round(groupPos.$2, precision),
-      );
-      if (groupPosStr != ('0', '0')) {
-        outBuffer.write('x="${groupPosStr.$1}" y="${groupPosStr.$2}" ');
-      }
-      outBuffer.write('/>\n');
+      outBuffer.write('  <use xlink:href="#$groupId" />\n');
     }
 
     var defaultGroup = groupDefineMap[constants.defaultGroupId];

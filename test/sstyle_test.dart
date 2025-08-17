@@ -26,11 +26,22 @@ void main() {
     var sstyle = Sstyle();
 
     sstyle.fill = 'red';
-    sstyle.fillRule = FillRule.nonzero;
+    sstyle.fillRule = FillRule.evenodd;
     sstyle.fillOpacity = 30.0;
     sstyle.precision = 4;
 
-    expect(sstyle.format(), 'fill="red" fill-rule="nonzero" fill-opacity="30"');
+    expect(sstyle.format(), 'fill="red" fill-rule="evenodd" fill-opacity="30"');
+  });
+
+  test('format fill3', () {
+    var sstyle = Sstyle();
+
+    sstyle.fill = 'red';
+    sstyle.fillRule = FillRule.inherit;
+    sstyle.fillOpacity = 30.0;
+    sstyle.precision = 4;
+
+    expect(sstyle.format(), 'fill="red" fill-rule="inherit" fill-opacity="30"');
   });
 
   test('format stroke', () {
@@ -44,10 +55,16 @@ void main() {
     sstyle.strokeDashArray = '40,10';
     sstyle.strokeDashOffset = 5.0;
     sstyle.precision = 4;
-
     expect(
       sstyle.format(),
       'fill="none" stroke-width="5" stroke="#ABABAB" stroke-linejoin="round" stroke-linecap="square" stroke-miterlimit="2" stroke-dasharray="40,10" stroke-dashoffset="5"',
+    );
+
+    sstyle.strokeLineJoin = StrokeLineJoin.bevel;
+    sstyle.strokeLineCap = StrokeLineCap.inherit;
+    expect(
+      sstyle.format(),
+      'fill="none" stroke-width="5" stroke="#ABABAB" stroke-linejoin="bevel" stroke-linecap="inherit" stroke-miterlimit="2" stroke-dasharray="40,10" stroke-dashoffset="5"',
     );
   });
 

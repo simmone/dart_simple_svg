@@ -24,7 +24,7 @@ class TextKerning {
 
   String formatted() {
     if (val != null) {
-      return '$this.val';
+      return '$val';
     } else {
       return type.name;
     }
@@ -55,7 +55,7 @@ class TextSpace {
 
   String formatted() {
     if (val != null) {
-      return '$this.val';
+      return '$val';
     } else {
       return type.name;
     }

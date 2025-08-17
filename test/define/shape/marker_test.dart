@@ -5,9 +5,7 @@ import 'package:simple_svg/simple_svg.dart';
 
 void main() {
   test('marker normal', () async {
-    final svg = Svg(200, 120);
-
-    final markerId = svg.defShape(Marker(MarkerType.triangle1));
+    final svg = Svg(200, 250);
 
     final lineId = svg.defShape(Line((0, 0), (100, 0)));
 
@@ -17,12 +15,68 @@ void main() {
 
     var defaultGroup = Group();
 
-    var widget = Widget(lineId);
-    widget.sstyle = lineSstyle;
-    widget.at = (50, 50);
-    widget.markerEndId = markerId;
+    final triangle1Id = svg.defShape(Marker(MarkerType.triangle1));
+    var widget1 = Widget(lineId);
+    widget1.sstyle = lineSstyle;
+    widget1.at = (50, 50);
+    widget1.markerEndId = triangle1Id;
+    defaultGroup.placeWidget(widget1);
 
-    defaultGroup.placeWidget(widget);
+    final triangle2Id = svg.defShape(Marker(MarkerType.triangle2));
+    var widget2 = Widget(lineId);
+    widget2.sstyle = lineSstyle;
+    widget2.at = (50, 70);
+    widget2.markerEndId = triangle2Id;
+    defaultGroup.placeWidget(widget2);
+
+    final circleId = svg.defShape(Marker(MarkerType.circle));
+    var widget3 = Widget(lineId);
+    widget3.sstyle = lineSstyle;
+    widget3.at = (50, 90);
+    widget3.markerEndId = circleId;
+    defaultGroup.placeWidget(widget3);
+
+    final indent1Id = svg.defShape(Marker(MarkerType.indent1));
+    var widget4 = Widget(lineId);
+    widget4.sstyle = lineSstyle;
+    widget4.at = (50, 110);
+    widget4.markerEndId = indent1Id;
+    defaultGroup.placeWidget(widget4);
+
+    final indent2Id = svg.defShape(Marker(MarkerType.indent2));
+    var widget5 = Widget(lineId);
+    widget5.sstyle = lineSstyle;
+    widget5.at = (50, 130);
+    widget5.markerEndId = indent2Id;
+    defaultGroup.placeWidget(widget5);
+
+    final diamond1Id = svg.defShape(Marker(MarkerType.diamond1));
+    var widget6 = Widget(lineId);
+    widget6.sstyle = lineSstyle;
+    widget6.at = (50, 150);
+    widget6.markerEndId = diamond1Id;
+    defaultGroup.placeWidget(widget6);
+
+    final diamond2Id = svg.defShape(Marker(MarkerType.diamond2));
+    var widget7 = Widget(lineId);
+    widget7.sstyle = lineSstyle;
+    widget7.at = (50, 170);
+    widget7.markerEndId = diamond2Id;
+    defaultGroup.placeWidget(widget7);
+
+    final curve1Id = svg.defShape(Marker(MarkerType.curve1));
+    var widget8 = Widget(lineId);
+    widget8.sstyle = lineSstyle;
+    widget8.at = (50, 190);
+    widget8.markerEndId = curve1Id;
+    defaultGroup.placeWidget(widget8);
+
+    final curve2Id = svg.defShape(Marker(MarkerType.curve2));
+    var widget9 = Widget(lineId);
+    widget9.sstyle = lineSstyle;
+    widget9.at = (50, 210);
+    widget9.markerEndId = curve2Id;
+    defaultGroup.placeWidget(widget9);
 
     svg.addDefaultGroup(defaultGroup);
 
